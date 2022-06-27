@@ -12,5 +12,21 @@ namespace Portfolio.Controllers
         {
             Response.Redirect("/User/Home.aspx");
         }
+
+        public void IsOnline(){
+            try(){
+                return "{status:500"
+            }
+            catch (Exception ex){
+                return ex;
+            }
+            finally{
+                return "status delivered";
+            }
+        }
+
+        public void netspeed(){            
+            return "netspeed"; 
+        }
     }
 }
