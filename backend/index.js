@@ -1,4 +1,14 @@
 const express = require("express")
+const path = require("path")
 const app = express()
 
-app.listen(process.env.PORT, ()=> console.log("Server Started"))
+app.set('view engine', 'html');
+app.engine('html', require('ejs').renderFile);
+
+app.use(express.static(path.join(__dirname, "../frontend/")));
+
+app.get("/", (request, response)=>{
+    response.render("../frontend/index.html")
+})
+
+app.listen(3000, ()=> console.log("Server Started"))
