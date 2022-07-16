@@ -11,4 +11,4 @@ app.get("/", (request, response)=>{
     response.render("../frontend/index.html")
 })
 
-app.listen(3000, ()=> console.log("Server Started"))
+app.listen(process.env.PORT, ()=> console.log("Server Started"))
