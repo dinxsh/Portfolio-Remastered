@@ -11,4 +11,13 @@ app.get("/", (request, response)=>{
     response.render("../frontend/index.html")
 })
 
-app.listen(process.env.PORT, ()=> console.log("Server Started"))
+app.get("/data", (request, response)=>{
+    response.json({"count":1})
+})
+
+app.get("/resume", (request, response)=>{
+    const file = `${__dirname}/docs/resume.pdf`;
+    response.download(file);
+})
+
+app.listen(3000, ()=> console.log("Server Started"))
