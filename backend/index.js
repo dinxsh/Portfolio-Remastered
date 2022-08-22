@@ -20,4 +20,4 @@ app.get("/resume", (request, response)=>{
     response.download(file);
 })
 
-app.listen(3000, ()=> console.log("Server Started"))
+app.listen(process.env.PORT, ()=> console.log("Server Started"))
