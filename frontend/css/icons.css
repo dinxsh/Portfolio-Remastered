@@ -80,3 +80,9 @@
   background-color: #de463b;
   color: #ffffff;
 }
+.wrapper .devto:hover,
+.wrapper .devto:hover .tooltip,
+.wrapper .devto:hover .tooltip::before {
+  background-color: #152e5e;
+  color: #ffffff;
+}

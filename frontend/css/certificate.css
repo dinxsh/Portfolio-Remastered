@@ -1,0 +1,98 @@
+*,
+*::before,
+*::after {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  border: none;
+  out-line: none;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+:root {
+  /*  FONTS  */
+  --font-family: sans-serif;
+  --font-reset: 62.5%;
+  --font-size: 1.6rem;
+  --line-height: base-line;
+  /*  WIDTH  */
+  --container-width: 1366px;
+  /*  COLOR  */
+  --light: #ffffff;
+}
+
+html {
+  font-size: var(--font-reset);
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+}
+
+#header,
+#main,
+#footer {
+  margin: 1.5rem 0rem 1.5rem;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0px auto;
+  padding: 0rem 1rem;
+}
+
+.grid {
+  display: grid;
+}
+
+.flex {
+  display: flex;
+}
+
+/* FRONT PAGE */
+#title {
+  text-align: center;
+  padding: 1rem 0rem;
+}
+
+.contain-images {
+  grid-template-columns: repeat(auto-fill, minmax(42rem, 1fr));
+  gap: 3rem
+}
+
+.figure {
+  width: 100%;
+  position: relative;
+  box-shadow: 0rem 0.6rem 2rem rgba(0,0,0,0.5);
+}
+
+.figcap {
+  width: 100%;
+  padding: 1rem 0rem;
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--light);
+  background: rgba(0,0,0,0.3);
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+}
+
+#signature {
+  padding: 1rem 0rem;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+}
