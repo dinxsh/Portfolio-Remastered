@@ -18,6 +18,7 @@ app.get("/certificate", (request, response)=>{
 app.get("/resume", (request, response)=>{
     const file = `${__dirname}/docs/resume.pdf`;
     response.download(file);
+    response.redirect("/")
 })
 
 app.listen(process.env.PORT, ()=> console.log("Server Started"))
