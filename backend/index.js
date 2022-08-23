@@ -11,7 +11,7 @@ app.get("/", (request, response)=>{
     response.render("../frontend/index.html")
 })
 
-app.get("/certificate", (request, response)=>{
+app.get("/certificates", (request, response)=>{
     response.render("../frontend/certificate.html")
 })
 
