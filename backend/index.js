@@ -1,4 +1,5 @@
 const express = require("express")
+fs = require('fs');
 const path = require("path")
 const app = express()
 
@@ -20,4 +21,12 @@ app.get("/resume", (request, response)=>{
     response.download(file);    
 })
 
-app.listen(process.env.PORT, ()=> console.log("Server Started"))
+app.get('/viewresume', function(request, response){
+    var tempFile="backend/docs/resume.pdf";
+    fs.readFile(tempFile, function (err,data){
+       response.contentType("application/pdf");
+       response.send(data);
+    });
+});
+
+app.listen(3000, ()=> console.log("Server Started"))
