@@ -12,8 +12,8 @@ app.get("/", (request, response)=>{
     response.render("../frontend/index.html")
 })
 
-app.get("/certificates", (request, response)=>{
-    response.render("../frontend/certificate.html")
+app.get("/mac", (request, response)=>{
+    response.render("../frontend/macbook.html")
 })
 
 app.get("/resume", (request, response)=>{
@@ -29,4 +29,4 @@ app.get('/viewresume', function(request, response){
     });
 });
 
-app.listen(process.env.PORT, ()=> console.log("Server Started"))
+app.listen(3000, ()=> console.log("Server Started"))
