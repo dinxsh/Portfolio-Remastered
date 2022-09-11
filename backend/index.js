@@ -12,26 +12,6 @@ app.get("/", (request, response)=>{
     response.render("../frontend/index.html")
 })
 
-app.get("/services", (request, response)=>{
-    response.render("../frontend/services.html")
-})
-
-app.get("/about", (request, response)=>{
-    response.render("../frontend/about.html")
-})
-
-app.get("/work", (request, response)=>{
-    response.render("../frontend/work.html")
-})
-
-app.get("/services", (request, response)=>{
-    response.render("../frontend/services.html")
-})
-
-app.get("/education", (request, response)=>{
-    response.render("../frontend/education.html")
-})
-
 app.get("/mac", (request, response)=>{
     response.render("../frontend/macbook.html")
 })
@@ -49,4 +29,4 @@ app.get('/viewresume', function(request, response){
     });     
 });
 
-app.listen(process.env.PORT, ()=> console.log("Server Started"))
+app.listen(3000, ()=> console.log("Server Started"))
