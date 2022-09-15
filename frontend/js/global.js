@@ -1,1 +1,1 @@
-function SendFeedback(){alert("Feedback Sent")}
+$.notify("BLOG: NEW BLOG", "info");
